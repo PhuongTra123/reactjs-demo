@@ -16,6 +16,13 @@ html {
   display: flex;
   justify-content: center;
 }
+
+.navbar {
+ position: fixed;
+ top: 0;
+ width: 100%;
+}
+
 .navbar-list {
   list-style-type: none;
   margin: 0;
