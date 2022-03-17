@@ -5,15 +5,14 @@ import { useState } from "react";
 import "./styles.scss";
 import Todo from "../Todo";
 import { addTodo } from "../../redux/actions";
-import { todoListSelector } from "../../redux/selectors";
-
+import { todoRemainingSelector } from "../../redux/selectors";
 
 export default function TodoList() {
   const dispatch = useDispatch();
   const [todoName, setTodoName] = useState("");
   const [priority, setPriority] = useState("Medium");
 
-  const todoList = useSelector(todoListSelector);
+  const todoList = useSelector(todoRemainingSelector);
 
   const handleAddButtonClick = (e) => {
     e.preventDefault();
@@ -26,8 +25,8 @@ export default function TodoList() {
       })
     );
 
-    setTodoName('');
-    setPriority('Medium')
+    setTodoName("");
+    setPriority("Medium");
   };
 
   const handleInputChange = (e) => {
@@ -42,7 +41,13 @@ export default function TodoList() {
     <div>
       <ul>
         {todoList.map((todo) => (
-          <Todo key={todo.id} name={todo.name} priority={todo.priority} />
+          <Todo
+            id={todo.id}
+            key={todo.id}
+            name={todo.name}
+            priority={todo.priority}
+            completed={todo.completed}
+          />
         ))}
       </ul>
       <div className="input-group">

@@ -1,12 +1,16 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { toggleTodoStatus } from "../../redux/actions";
 import "./styles.scss";
 
 
-export default function Todo({ name, priority }) {
-  const [checked, setChecked] = useState(false);
+export default function Todo({ id, name, priority, completed }) {
+  const dispatch = useDispatch();
+  const [checked, setChecked] = useState(completed);
 
   const toggleCheckbox = () => {
     setChecked(!checked);
+    dispatch(toggleTodoStatus(id))
   };
 
   return (
