@@ -1,0 +1,28 @@
+ul {
+    height: 200px;
+}
+
+.input-group {
+    height: 40px;
+}
+.add-item {
+    width: 60%;
+    height: 100%;
+}
+
+.add-priority {
+    height: 100%;
+    width: 100px;
+    text-align: center;
+}
+
+.primary {
+    color: #fff;
+    border-color: #1890ff;
+    background: #1890ff;
+
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    width: 70px;
+    height: 100%;
+}
