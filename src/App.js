@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 
 
 import "./App.css";
@@ -17,20 +17,18 @@ function App() {
       <div className="navbar">
         <ul className="navbar-list">
           <li>
-            <a className="active" href="/">
+            <Link className="active" to="/">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/info">Info</a>
+            <Link to="/info">Info</Link>
           </li>
           <li>
-            <a href="/todo">To do</a>
+            <Link to="/todo">To do</Link>
           </li>
         </ul>
       </div>
-      {/* <Form />
-      <Info /> */}
     </div>
   );
 }

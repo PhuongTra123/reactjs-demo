@@ -1,12 +1,12 @@
-.img-preview {
+.information {
+    display: flex;
     margin-top: 150px;
     margin-left: 200px;
+    gap: 100px;
 }
 
 .img-header {
     text-align: start;
-    font-size: 30px;
-    margin-left: 20px;
 }
 
 .img {
@@ -15,4 +15,46 @@
 
     display: block;
     margin-top: 20px;
+}
+
+.information-list {
+    .information-header {
+        text-align: left;
+    }
+}
+
+input.information-input {
+    height: 30px;
+    width: 200px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.add {
+    height: 30px;
+    width: 50px;
+    align-items: center;
+}
+
+ul.informationlist-item {
+    list-style: circle;
+    margin-top: 30px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+.information-item {
+    margin-bottom: 10px;
+}
+
+span.delete {
+    border: 1px solid;
+    width: 23px;
+    margin-left: 20px;
+
+    text-align: center;
+    display: inline-block;
+    background-color: #80808052;
+    cursor: pointer;
 }
