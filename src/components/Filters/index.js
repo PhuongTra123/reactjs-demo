@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { priorityFilterChange, searchFilterChange } from "../../redux/actions";
-import { statusFilterChange } from "../../redux/actions";
+import filtersSlice from './filtersSlice';
 import "./styles.scss";
 
 function Filters(props) {
@@ -12,17 +11,17 @@ function Filters(props) {
 
   const handleSearchTextChange = (e) => {
     setSearchText(e.target.value);
-    dispatch(searchFilterChange(e.target.value));
+    dispatch(filtersSlice.actions.searchFilterChange(e.target.value));
   };
 
   const handleStatusChange = (e) => {
     setFilterStatus(e.target.value)
-    dispatch(statusFilterChange(e.target.value))
+    dispatch(filtersSlice.actions.statusFilterChange(e.target.value))
   }
 
   const handlePriorityFilterChange = (e) => {
     setFilterPriority(e.target.value)
-    dispatch(priorityFilterChange(e.target.value))
+    dispatch(filtersSlice.actions.priorityFilterChange(e.target.value))
   }
 
   return (

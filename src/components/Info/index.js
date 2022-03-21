@@ -94,7 +94,7 @@ const Info = () => {
       </div>
 
       <div className="information-list">
-        <h1 className="information-header">Hobbies</h1>
+        <h1 className="information-header">To do</h1>
         <div className="information-add">
           <input
             className="information-input"
@@ -115,7 +115,7 @@ const Info = () => {
             ))}
          
         </ul>
-      </div>
+      </div> 
     </div>
   );
 };
